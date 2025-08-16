@@ -1,15 +1,14 @@
 ---
-import '../styles/global.css'; // <-- AÑADE ESTA LÍNEA
-// src/pages/index.astro
+import '../styles/global.css';
 
-// --- Aquí puedes definir variables ---
+// --- Variables ---
 const nombre = "Gustavo";
-const edad = "26"; // La edad que cumples, ¡o no!
+const edad = "26";
 const fecha = "Sábado, 16 de Agosto";
-const hora = "6:00 PM en adelante (hasta que el cuerpo aguante)";
+const hora = "6:00 PM en adelante";
 const lugar = "Mi Casa - El Centro de Operaciones";
 const direccion = "Jr. La cultura";
-const urlMapa = "https://maps.app.goo.gl/7MtNANStMP6EiPqXA"; // Pon aquí el link de Google Maps
+const urlMapa = "https://maps.app.goo.gl/7MtNANStMP6EiPqXA";
 ---
 
 <html lang="es">
@@ -25,22 +24,18 @@ const urlMapa = "https://maps.app.goo.gl/7MtNANStMP6EiPqXA"; // Pon aquí el lin
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-        .font-pixel {
-            font-family: 'Press Start 2P', cursive;
-        }
+        body { font-family: 'Roboto', sans-serif; }
+        .font-pixel { font-family: 'Press Start 2P', cursive; }
     </style>
 </head>
 <body class="bg-gray-900 text-white selection:bg-yellow-500 selection:text-black">
 
-    <main class="container mx-auto px-4 py-12 max-w-3xl text-center">
+    <main class="container mx-auto px-4 sm:px-6 py-12 max-w-3xl text-center">
 
         <header class="mb-12">
             <h1 class="font-pixel text-3xl md:text-5xl text-yellow-400 mb-4 animate-pulse">¡MISIÓN ACEPTADA!</h1>
-            <p class="text-lg text-gray-300">Has sobrevivido a 365 días más. Es hora de celebrarlo.</p>
-            <p class="text-xl font-bold mt-2">¡{nombre} ha subido de nivel! Ahora es nivel {edad}.</p>
+            <p class="text-base md:text-lg text-gray-300">Has sobrevivido a 365 días más. Es hora de celebrarlo.</p>
+            <p class="text-lg md:text-xl font-bold mt-2">¡{nombre} ha subido de nivel! Ahora es nivel {edad}.</p>
         </header>
 
         <div class="my-8">
@@ -48,14 +43,14 @@ const urlMapa = "https://maps.app.goo.gl/7MtNANStMP6EiPqXA"; // Pon aquí el lin
             <p class="text-sm mt-2 text-gray-500">Representación gráfica de cómo me siento.</p>
         </div>
 
-        <section class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
-            <h2 class="font-pixel text-2xl text-yellow-400 mb-6">Detalles de la Convocatoria</h2>
+        <section class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-2xl border border-gray-700">
+            <h2 class="font-pixel text-2xl text-yellow-400 mb-6">Detalles</h2>
 
             <div class="space-y-6 text-left">
                 <div class="flex items-start space-x-4">
                     <span class="text-3xl">🗓️</span>
                     <div>
-                        <h3 class="font-bold text-lg">Fecha y Hora del Evento</h3>
+                        <h3 class="font-bold text-lg">Fecha y Hora</h3>
                         <p class="text-gray-300">{fecha}</p>
                         <p class="text-gray-400 text-sm">{hora}</p>
                     </div>
@@ -64,7 +59,7 @@ const urlMapa = "https://maps.app.goo.gl/7MtNANStMP6EiPqXA"; // Pon aquí el lin
                 <div class="flex items-start space-x-4">
                     <span class="text-3xl">📍</span>
                     <div>
-                        <h3 class="font-bold text-lg">Ubicación Secreta</h3>
+                        <h3 class="font-bold text-lg">Ubicación</h3>
                         <p class="text-gray-300">{lugar}</p>
                         <p class="text-gray-400 text-sm">{direccion}</p>
                     </div>
@@ -73,8 +68,8 @@ const urlMapa = "https://maps.app.goo.gl/7MtNANStMP6EiPqXA"; // Pon aquí el lin
                 <div class="flex items-start space-x-4">
                     <span class="text-3xl">🎁</span>
                     <div>
-                        <h3 class="font-bold text-lg">Código de Vestimenta y Regalos</h3>
-                        <p class="text-gray-300">Ropa cómoda para festejar. Tu presencia es el mejor regalo, pero si insistes, ¡acepto sobornos en forma de pizza o buenos deseos!</p>
+                        <h3 class="font-bold text-lg">Regalos</h3>
+                        <p class="text-gray-300">Tu presencia es el mejor regalo. ¡No es necesario traer nada más que buena onda!</p>
                     </div>
                 </div>
             </div>
@@ -86,12 +81,13 @@ const urlMapa = "https://maps.app.goo.gl/7MtNANStMP6EiPqXA"; // Pon aquí el lin
 
         <section class="mt-12">
             <h2 class="font-pixel text-2xl text-yellow-400 mb-4">¿Aceptas la Misión?</h2>
-            <p class="text-gray-300 mb-6">Confirma tu asistencia antes de que se autodestruya este mensaje.</p>
-            <div class="flex justify-center gap-4">
-                <a href="https://wa.me/906771606?text=¡Confirmado!%20Llevaré%20mis%20mejores%20pasos%20de%20baile.%20¡Allí%20nos%20vemos!" target="_blank" class="bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-400 transition-transform transform hover:scale-105">
+            <p class="text-gray-300 mb-6">Confirma tu asistencia antes de que este mensaje se autodestruya.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://wa.me/906771606?text=¡Confirmado!%20Llevaré%20mis%20mejores%20pasos%20de%20baile.%20¡Allí%20nos%20vemos!" target="_blank" class="w-full sm:w-auto bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-400 transition-transform transform hover:scale-105">
                     ¡Claro que sí! 🎉
                 </a>
-                <a href="https://wa.me/906771606?text=No%20podré%20asistir,%20pero%20te%20envío%20un%20abrazo%20virtual%20y%20mis%20mejores%20deseos." target="_blank" class="bg-red-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-red-500 transition-transform transform hover:scale-105">
+                <a href="https://wa.me/906771606?text=No%20podré%20asistir,%20pero%20te%20envío%20un%20abrazo%20virtual." target="_blank" class="w-full sm:w-auto bg-red-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-red-500 transition-transform transform hover:scale-105">
                     No podré 😢
                 </a>
             </div>
