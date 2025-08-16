@@ -8,7 +8,7 @@ const fecha = "Sábado, 16 de Agosto";
 const hora = "6:00 PM en adelante";
 const lugar = "Mi Casa - El Centro de Operaciones";
 const direccion = "Jr. La cultura";
-const urlMapa = "https://maps.app.goo.gl/7MtNANStMP6EiPqXA";
+const urlMapa = "http://googleusercontent.com/maps/google.com/0";
 ---
 
 <html lang="es">
@@ -46,8 +46,9 @@ const urlMapa = "https://maps.app.goo.gl/7MtNANStMP6EiPqXA";
         <section class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-2xl border border-gray-700">
             <h2 class="font-pixel text-2xl text-yellow-400 mb-6">Detalles</h2>
 
-            <div class="space-y-6 text-left">
-                <div class="flex items-start space-x-4">
+            <div class="space-y-10">
+
+                <div class="flex flex-col items-center space-y-2 md:flex-row md:items-start md:space-y-0 md:space-x-4 md:text-left">
                     <span class="text-3xl">🗓️</span>
                     <div>
                         <h3 class="font-bold text-lg">Fecha y Hora</h3>
@@ -56,7 +57,7 @@ const urlMapa = "https://maps.app.goo.gl/7MtNANStMP6EiPqXA";
                     </div>
                 </div>
 
-                <div class="flex items-start space-x-4">
+                <div class="flex flex-col items-center space-y-2 md:flex-row md:items-start md:space-y-0 md:space-x-4 md:text-left">
                     <span class="text-3xl">📍</span>
                     <div>
                         <h3 class="font-bold text-lg">Ubicación</h3>
@@ -65,16 +66,16 @@ const urlMapa = "https://maps.app.goo.gl/7MtNANStMP6EiPqXA";
                     </div>
                 </div>
 
-                <div class="flex items-start space-x-4">
+                <div class="flex flex-col items-center space-y-2 md:flex-row md:items-start md:space-y-0 md:space-x-4 md:text-left">
                     <span class="text-3xl">🎁</span>
                     <div>
                         <h3 class="font-bold text-lg">Regalos</h3>
-                        <p class="text-gray-300">Tu presencia es el mejor regalo. ¡No es necesario traer nada más que buena onda!</p>
+                        <p class="text-gray-300 font-medium">Tu presencia es el mejor regalo. ¡No es necesario traer nada más que buena onda!</p>
                     </div>
                 </div>
             </div>
 
-            <a href={urlMapa} target="_blank" class="mt-8 inline-block bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg hover:bg-yellow-400 transition-transform transform hover:scale-105 font-pixel text-sm">
+            <a href={urlMapa} target="_blank" class="mt-8 block w-full md:w-auto md:inline-block bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg hover:bg-yellow-400 transition-transform transform hover:scale-105 font-pixel text-sm">
                 Ver Mapa del Tesoro
             </a>
         </section>
